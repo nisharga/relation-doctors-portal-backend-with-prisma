@@ -77,7 +77,7 @@ const getAllDoctors = async (
         },
         include: {
             specialization: true,
-            availability: {
+            /* availability: {
                 include: {
                     availableServices: {
                         include: {
@@ -87,7 +87,7 @@ const getAllDoctors = async (
                     },
                     slot: true
                 }
-            }
+            } */
         },
         take: 100,
         skip: (page - 1) * limit,
@@ -114,7 +114,7 @@ const getSingleDoctor = async (id: string): Promise<Doctor | null> => {
         },
         include: {
             specialization: true,
-            availability: {
+            /* availability: {
                 include: {
                     availableServices: {
                         include: {
@@ -124,7 +124,7 @@ const getSingleDoctor = async (id: string): Promise<Doctor | null> => {
                     },
                     slot: true
                 }
-            }
+            } */
         }
     });
     return result;
