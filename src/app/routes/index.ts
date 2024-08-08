@@ -4,6 +4,7 @@ import express from 'express'
 import { specializationRoutes } from '../modules/Specializations/specializations.routes'
  
 import { doctorRoutes } from '../modules/Doctors/Doctors.routes'
+import { patientRoutes } from '../modules/Patients/patients.routes'
 
 
 const router = express.Router()
@@ -16,6 +17,10 @@ const moduleRoutes: any[] = [
   {
     path: '/specializations',
     route: specializationRoutes,
+  } ,
+  {
+    path: '/patients',
+    route: patientRoutes,
   } 
 ]
 
